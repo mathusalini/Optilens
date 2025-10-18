@@ -67,3 +67,14 @@ These fields are returned as **structured JSON** and then converted into a **CSV
      "start_page": 1,
      "pages": 2
    }
+
+**Why Supabase?**
+- Provides a cloud SQL database (PostgreSQL)
+- Keeps your scraped Amazon data organized and persistent
+- Enables realtime access for dashboards and apps
+- No manual backend coding required
+- Integrates easily with Python and React
+
+**In this project:**
+We use Supabase to store pendant light product data (titles, prices, ratings, reviews, image URLs, and product links) fetched via Oxylabs.  
+This allows long-term market analysis, visualization, and future mobile app integration.
