@@ -68,16 +68,6 @@ These fields are returned as **structured JSON** and then converted into a **CSV
      "pages": 2
    }
 
-**Why Supabase?**
-- Provides a cloud SQL database (PostgreSQL)
-- Keeps your scraped Amazon data organized and persistent
-- Enables realtime access for dashboards and apps
-- No manual backend coding required
-- Integrates easily with Python and React
-
-**In this project:**
-We use Supabase to store pendant light product data (titles, prices, ratings, reviews, image URLs, and product links) fetched via Oxylabs.  
-This allows long-term market analysis, visualization, and future mobile app integration.
 
 ### Why We Use Oxylabs
 - Amazon cannot be scraped directly due to dynamic content and anti-bot protection.
@@ -85,11 +75,35 @@ This allows long-term market analysis, visualization, and future mobile app inte
 - It handles **proxies, captchas, and rendering**, returning clean **JSON** results.
 - We use Oxylabs to fetch **pendant light product data** (title, price, rating, reviews, ASIN, URLs, images).
 
-### Why We Still Need Supabase
-- Supabase stores the **extracted data** securely and permanently in a cloud SQL database.
-- Enables easy retrieval, filtering, and analysis.
-- Acts as a **data warehouse** for visualization, reporting, or mobile app integration.
+**Why Supabase?**
+- Provides a cloud SQL database (PostgreSQL)
+- Keeps your scraped Amazon data organized and persistent
+- Enables realtime access for dashboards and apps
+- No manual backend coding required
+- Integrates easily with Python and React
 
-**Together:**
-`Oxylabs → Extracts data`  
-`Supabase → Stores and manages it`
+✅ **Oxylabs →** Fetches product data from Amazon  
+✅ **Supabase →** Keeps that data organized & permanent  
+✅ **Your App →** Uses that stored data for visualization or analytics
+
+---
+
+## 🚀 Why Oxylabs (and not Normal Scraping Tools)?
+
+| Problem | Normal Scrapers | Oxylabs |
+|----------|----------------|----------|
+| **Amazon blocks bots** | ❌ Very easily | ✅ Handles automatically |
+| **Dynamic content (JS)** | ❌ Fails often | ✅ Fully rendered |
+| **Legal & compliance** | ⚠️ Risky | ✅ Safe & managed |
+| **Proxy rotation** | ❌ Manual setup | ✅ Built-in |
+| **Output format** | ❌ Raw HTML | ✅ JSON with clean fields |
+| **Speed** | ⚠️ Slow | ✅ Cloud parallel scraping |
+| **Reliability** | ⚠️ Inconsistent | ✅ Enterprise-grade uptime |
+
+---
+
+Oxylabs functions as a **“smart scraper cloud”** — it performs all the complex scraping tasks safely and returns **clean, structured data** that’s ready for direct use or storage in Supabase.
+
+**In this project:**
+We use Supabase to store pendant light product data (titles, prices, ratings, reviews, image URLs, and product links) fetched via Oxylabs.  
+This allows long-term market analysis, visualization, and future mobile app integration.
