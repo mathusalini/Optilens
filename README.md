@@ -78,3 +78,18 @@ These fields are returned as **structured JSON** and then converted into a **CSV
 **In this project:**
 We use Supabase to store pendant light product data (titles, prices, ratings, reviews, image URLs, and product links) fetched via Oxylabs.  
 This allows long-term market analysis, visualization, and future mobile app integration.
+
+### Why We Use Oxylabs
+- Amazon cannot be scraped directly due to dynamic content and anti-bot protection.
+- Oxylabs provides a **legal, stable, and high-success-rate API** for data extraction.
+- It handles **proxies, captchas, and rendering**, returning clean **JSON** results.
+- We use Oxylabs to fetch **pendant light product data** (title, price, rating, reviews, ASIN, URLs, images).
+
+### Why We Still Need Supabase
+- Supabase stores the **extracted data** securely and permanently in a cloud SQL database.
+- Enables easy retrieval, filtering, and analysis.
+- Acts as a **data warehouse** for visualization, reporting, or mobile app integration.
+
+**Together:**
+`Oxylabs → Extracts data`  
+`Supabase → Stores and manages it`
